@@ -1,0 +1,21 @@
+@if(signedIn){
+
+<div class="flex h-screen overflow-hidden">
+  <app-sidebar class="w-1/4 bg-white border-r border-gray-300"></app-sidebar>
+
+  <!-- Main Chat Area -->
+  <app-chat class="flex-1"></app-chat>
+</div>
+}@else {
+<div class="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
+  <h2 class="text-5xl mb-3 text-black">Sign in to twitch</h2>
+  <p class="text-black">you can find the sign in button below :)</p>
+  <button
+    (click)="redirect()"
+    class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded"
+  >
+    Sign in button :)
+  </button>
+</div>
+
+}

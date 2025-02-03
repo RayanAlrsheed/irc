@@ -1,0 +1,18 @@
+@if(message.isReply){
+
+<div class="flex justify-start mb-4 flex-row-reverse">
+  <div class="ms-2 font-bold">{{ message.sender }}</div>
+  <div class="flex max-w-96 bg-indigo-500 text-white rounded-lg p-3 gap-3 mt-3">
+    <p class="text-wrap break-words max-w-90">{{ message.content }}</p>
+  </div>
+</div>
+} @else{
+<div class="flex mb-4 cursor-pointer">
+  <div class="me-2 font-bold">{{ message.sender }}</div>
+  <div class="flex max-w-96 bg-gray-300 rounded-lg p-3 gap-3 mt-3">
+    <p class="text-wrap break-words max-w-90">
+      {{ message.content }}
+    </p>
+  </div>
+</div>
+}

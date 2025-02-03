@@ -1,0 +1,13 @@
+<!-- Sidebar -->
+<div>
+  <!-- Sidebar Header -->
+  <app-header></app-header>
+
+  <!-- Contact List -->
+  <div class="overflow-y-auto h-screen p-3 mb-9 pb-20">
+    <app-channel
+    *ngFor="let channel of channels"
+      [channel]="channel"
+    ></app-channel>
+  </div>
+</div>

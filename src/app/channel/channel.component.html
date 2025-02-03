@@ -1,0 +1,47 @@
+<div
+  [ngClass]="{ 'hover:bg-gray-300': !this.chosen, 'bg-gray-200': this.chosen }"
+  class="flex items-center mb-4 cursor-pointer p-2 rounded-md"
+>
+  <div class="items-center size-max flex-1" (click)="chooseChannel()">
+    <div class="flex">
+      <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+        <img
+          src="https://static-cdn.jtvnw.net/user-default-pictures-uv/cdd517fe-def4-11e9-948e-784f43822e80-profile_image-300x300.png"
+          alt="User Avatar"
+          class="w-12 h-12 rounded-full"
+        />
+      </div>
+      <h2 class="text-lg font-semibold">{{ channel.name }}</h2>
+    </div>
+    <p
+      class="text-gray-600"
+      *ngIf="channel.messages[channel.messages.length - 1] as message"
+    >
+      @if((message.sender + ': ' + message.content).length > 35){
+      {{ (message.sender + ": " + message.content | slice : 0 : 35) + "..." }}
+
+      }@else {
+      {{ message.sender + ": " + message.content }}
+
+      }
+    </p>
+  </div>
+  <button
+    id="closeButton"
+    class="focus:outline-none hover:bg-gray-400 rounded-lg w-6"
+    (click)="removeChannel()"
+  >
+    <span class="text-2xl text-red-700">x</span>
+    <!-- <svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="h-5 w-5 text-gray-100"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+>
+  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+  <path
+    d="M2 10a2 2 0 012-2h12a2 2 0 012 2 2 2 0 01-2 2H4a2 2 0 01-2-2z"
+  />
+</svg> -->
+  </button>
+</div>
