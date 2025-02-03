@@ -1,3 +1,8 @@
+not a real project, for salman code jam activity
+you can use this url to try it instead of installing every thing:
+https://chat.abosnon.com
+will be removed soon :)
+
 # IrcChat
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
