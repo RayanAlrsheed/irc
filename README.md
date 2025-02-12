@@ -1,7 +1,4 @@
 not a real project, for salman code jam activity
-you can use this url to try it instead of installing every thing:
-https://chat.abosnon.com
-will be removed soon :)
 
 # requirements
 you need to install node and then install the packages using
