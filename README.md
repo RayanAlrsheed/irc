@@ -3,6 +3,11 @@ you can use this url to try it instead of installing every thing:
 https://chat.abosnon.com
 will be removed soon :)
 
+# requirements
+you need to install node and then install the packages using
+```bash
+npm i
+```
 # IrcChat
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
